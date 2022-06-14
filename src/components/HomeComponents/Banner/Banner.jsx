@@ -1,11 +1,10 @@
-import React from "react";
-import { Button, ButtonGroup, Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
+import din from "../../../images/din-roda.png";
+import github from "../../../images/Github.svg";
+import linkedin from "../../../images/LinkedIN.svg";
+import quote from "../../../images/quote.svg";
 import Navigation from "../../Navigation/Navigation";
 import "./Banner.css";
-import quote from "../../../images/quote.svg";
-import din from "../../../images/din-roda.png";
-import linkedin from "../../../images/LinkedIN.svg";
-import github from "../../../images/Github.svg";
 
 const Banner = () => {
   return (
@@ -13,16 +12,16 @@ const Banner = () => {
       <Navigation />
       <Container fluid className="pt-5">
         <Row className="">
-          <Col md={6} className=" d-none d-md-block">
-            <div className=" banner-col text-end">
+          <Col md={6} className="d-none d-md-block">
+            <div className="banner-col ps-5 text-end">
               <div className="text-end">
                 <img src={quote} alt="" />
               </div>
-              <h2 className="my-4">
+              <h2 className="my-4 fs-2">
                 effective business conduct based on up-to-date technology is the
                 basis for success in the current era.
               </h2>
-              <h3 className="my-2">Din Roda</h3>
+              <h3 className="my-2 fs-1">Din Roda</h3>
               <p>I am a Full Stack Developer</p>
               <div>
                 <div className="d-flex gap-3 justify-content-end">
