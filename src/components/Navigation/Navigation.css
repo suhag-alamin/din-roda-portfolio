@@ -1,0 +1,15 @@
+.logo {
+  width: 80%;
+  z-index: 9999;
+}
+
+.nav-link {
+  color: #fff !important;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-link {
+    color: #30549e !important;
+  }
+}

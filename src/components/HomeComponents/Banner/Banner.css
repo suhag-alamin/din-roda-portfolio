@@ -1,0 +1,26 @@
+.banner-section {
+  background: #2e4a93;
+  color: #fff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.banner-col {
+  border-right: 2px solid #fff;
+  padding-right: 50px;
+}
+
+/* .din-roda {
+  position: absolute;
+  top: 0;
+  right: -165px;
+  z-index: -1;
+} */
+.din-roda {
+  margin-top: -145px;
+  margin-right: -12px;
+}
+
+.din-roda img {
+  width: 100%;
+}
