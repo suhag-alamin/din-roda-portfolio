@@ -1,9 +1,11 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, ButtonGroup, Col, Container, Row } from "react-bootstrap";
 import Navigation from "../../Navigation/Navigation";
 import "./Banner.css";
 import quote from "../../../images/quote.svg";
 import din from "../../../images/din-roda.png";
+import linkedin from "../../../images/LinkedIN.svg";
+import github from "../../../images/Github.svg";
 
 const Banner = () => {
   return (
@@ -22,6 +24,28 @@ const Banner = () => {
               </h2>
               <h3 className="my-2">Din Roda</h3>
               <p>I am a Full Stack Developer</p>
+              <div>
+                <div className="d-flex gap-3 justify-content-end">
+                  <Button variant="light">About me</Button>
+                  <Button variant="light">Talk with me</Button>
+                </div>
+                <div className="d-flex gap-2 justify-content-end my-4">
+                  <a
+                    href="http://linkedin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={linkedin} alt="" />
+                  </a>
+                  <a
+                    href="http://github.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={github} alt="" />
+                  </a>
+                </div>
+              </div>
             </div>
           </Col>
           <Col md={6}>
