@@ -10,12 +10,6 @@
   padding-right: 50px;
 }
 
-/* .din-roda {
-  position: absolute;
-  top: 0;
-  right: -165px;
-  z-index: -1;
-} */
 .din-roda {
   margin-top: -145px;
   margin-right: -12px;
@@ -23,4 +17,27 @@
 
 .din-roda img {
   width: 100%;
+}
+.header-section {
+  position: relative;
+}
+.mobile-banner {
+  background: rgba(42, 49, 119, 0.87);
+  color: #fff;
+  width: 90%;
+  margin: auto;
+  padding: 30px;
+  z-index: 9;
+  margin-top: -30%;
+  margin-bottom: 40px;
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .banner-section {
+    z-index: -1;
+  }
+  .mobile-banner {
+    display: block;
+  }
 }
