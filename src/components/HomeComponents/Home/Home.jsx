@@ -6,10 +6,10 @@ import Projects from "../Projects/Projects";
 import Reviews from "../Reviews/Reviews";
 import TechSkills from "../TechSkills/TechSkills";
 
-const Home = () => {
+const Home = ({ transparent }) => {
   return (
     <div>
-      <Banner />
+      <Banner transparent={transparent} />
       <TechSkills />
       <Projects />
       <Mission />

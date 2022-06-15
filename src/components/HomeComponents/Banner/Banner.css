@@ -1,3 +1,8 @@
+.mobile-nav-bar {
+  background: url(../../../images/banner-bg.svg) no-repeat center center;
+  background-size: cover;
+}
+
 .banner-section {
   background: url(../../../images/banner-bg.svg) no-repeat center center;
   background-size: cover;
@@ -37,6 +42,10 @@
 @media only screen and (max-width: 768px) {
   .banner-section {
     z-index: -1;
+    margin-top: -16px;
+  }
+  .banner-container {
+    margin-top: 90px;
   }
   .mobile-banner {
     display: block;

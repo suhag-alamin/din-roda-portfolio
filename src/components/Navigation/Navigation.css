@@ -5,6 +5,12 @@
 .nav-link {
   color: #fff !important;
   font-size: 18px;
+  display: inline-block;
+}
+.nav-link-dark {
+  color: #3055a0 !important;
+  font-size: 18px;
+  display: inline-block;
 }
 
 @media only screen and (max-width: 768px) {

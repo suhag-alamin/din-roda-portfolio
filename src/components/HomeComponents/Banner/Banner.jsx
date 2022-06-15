@@ -6,12 +6,17 @@ import quote from "../../../images/quote.svg";
 import Navigation from "../../Navigation/Navigation";
 import "./Banner.css";
 
-const Banner = () => {
+const Banner = ({ transparent }) => {
   return (
-    <div className="pb-2 pb-md-0">
+    <div className="pb-2 pb-md-0 header-section">
+      <div className="d-block d-md-none mb-0 mobile-nav-bar">
+        <Navigation transparent={transparent} />
+      </div>
       <div className="banner-section">
-        <Navigation />
-        <Container fluid className="pt-5">
+        <div className="d-none d-md-block">
+          <Navigation transparent={transparent} />
+        </div>
+        <Container fluid className="pt-5 banner-container">
           <Row>
             <Col md={6} className="d-none d-md-block">
               <div className="banner-col ps-5 text-end">
