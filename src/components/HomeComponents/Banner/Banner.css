@@ -1,5 +1,6 @@
 .banner-section {
-  background: #2e4a93;
+  background: url(../../../images/banner-bg.svg) no-repeat center center;
+  background-size: cover;
   color: #fff;
   position: relative;
   overflow-x: hidden;

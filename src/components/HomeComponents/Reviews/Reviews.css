@@ -1,5 +1,6 @@
 .reviews-section {
   background: #f2f2f2;
+  padding-bottom: 80px;
 }
 
 .client-img {
@@ -18,4 +19,43 @@
   font-weight: 400;
   color: #777;
   margin-bottom: 10px;
+}
+
+.reviewPreviousArrow {
+  position: absolute;
+  bottom: -25%;
+  left: 45%;
+  background-color: #fff;
+  color: #000;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.reviewNextArrow {
+  position: absolute;
+  bottom: -25%;
+  right: 45%;
+  background-color: #fff;
+  color: #000;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .reviewNextArrow,
+  .reviewPreviousArrow {
+    display: none;
+  }
 }

@@ -101,3 +101,10 @@
   color: #777;
   margin-bottom: 10px;
 }
+
+@media only screen and (max-width: 768px) {
+  .NextArrow,
+  .PreviousArrow {
+    display: none;
+  }
+}

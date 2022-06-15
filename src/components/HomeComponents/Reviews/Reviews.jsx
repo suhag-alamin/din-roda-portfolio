@@ -14,7 +14,7 @@ import "./Reviews.css";
 const PreviousBtn = (props) => {
   const { onClick } = props;
   return (
-    <div className={"PreviousArrow"} onClick={onClick}>
+    <div className={"reviewPreviousArrow"} onClick={onClick}>
       <IoIosArrowBack />
     </div>
   );
@@ -22,7 +22,7 @@ const PreviousBtn = (props) => {
 const NextBtn = (props) => {
   const { onClick } = props;
   return (
-    <div className={"NextArrow"} onClick={onClick}>
+    <div className={"reviewNextArrow"} onClick={onClick}>
       <IoIosArrowForward />
     </div>
   );

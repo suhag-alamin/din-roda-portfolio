@@ -1,0 +1,17 @@
+.contact-section {
+  background: url(../../../images/contact-bg.svg) no-repeat center center;
+  background-size: cover;
+  background-color: #2a3177;
+}
+
+.contact-form-box {
+  width: 50%;
+  margin: auto;
+  background: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-form-box {
+    width: 80%;
+  }
+}
