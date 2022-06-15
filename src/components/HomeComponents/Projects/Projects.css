@@ -10,7 +10,9 @@
 
 /* slider  */
 /* slider arrows  */
-
+.slick-list {
+  height: 100% !important;
+}
 .slick-slider {
   position: relative;
 }
@@ -57,9 +59,30 @@
 
 .single-slide {
   width: 95% !important;
-  height: 100%;
+  height: 100% !important;
   margin: auto;
-  transition: all 0.2s ease;
   margin-right: 10px !important;
   margin-left: 10px !important;
+}
+
+.project-details-box {
+  margin-top: 20px;
+
+  padding-top: 20px;
+}
+.clicked-box {
+  border-top: 1px solid #ddd;
+}
+
+.project-box-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222222;
+  margin-bottom: 10px;
+}
+.project-des {
+  font-size: 16px;
+  font-weight: 400;
+  color: #777;
+  margin-bottom: 10px;
 }
