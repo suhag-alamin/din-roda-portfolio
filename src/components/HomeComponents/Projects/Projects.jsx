@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import { Accordion, Button, Card, Container, Fade } from "react-bootstrap";
-import "./Projects.css";
-import projectThumb from "../../../images/project-thumb.svg";
+import { useState } from "react";
+import { Button, Card, Container } from "react-bootstrap";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { BsChevronDown, BsChevronUp } from "react-icons/bs";
+import { FiLink2 } from "react-icons/fi";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
-import { FiLink2 } from "react-icons/fi";
-import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import checkCircle from "../../../images/check-circle.svg";
+import projectThumb from "../../../images/project-thumb.svg";
+import "./Projects.css";
 
 // slider next prev
 const PreviousBtn = (props) => {

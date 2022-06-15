@@ -1,0 +1,18 @@
+.mission-des-box {
+  background: #2a3177;
+  color: #fff;
+  padding: 80px 60px;
+}
+
+.mission-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #edf5fb;
+  margin-bottom: 20px;
+}
+
+.mission-description {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
