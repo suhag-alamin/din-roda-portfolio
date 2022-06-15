@@ -1,13 +1,14 @@
-import React from "react";
 import { Card, Container } from "react-bootstrap";
-import "./Reviews.css";
-import client1 from "../../../images/client-1.svg";
-import client2 from "../../../images/client-2.svg";
-import client3 from "../../../images/client-3.svg";
+import { AiFillStar } from "react-icons/ai";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import Rating from "react-rating";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+import client1 from "../../../images/client-1.svg";
+import client2 from "../../../images/client-2.svg";
+import client3 from "../../../images/client-3.svg";
+import "./Reviews.css";
 
 // slider next prev
 const PreviousBtn = (props) => {
@@ -62,7 +63,7 @@ const reviews = [
     img: client1,
     review:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis aliquam nulla dictumst vulputate elit consequat turpis. Tincidunt commodo posuere commodo velit nunc eget dis diam justo. A adipiscing ut aliquam ut id elit auctor. Eget tincidunt nibh est scelerisque cursus suspendisse eu cras. Augue ut.",
-    star: 4,
+    star: 5,
   },
 ];
 
@@ -139,8 +140,14 @@ const Reviews = () => {
                     src={review.img}
                   />
                   <div>
-                    <h3>{review.name}</h3>
-                    <h4>{review.title}</h4>
+                    <h3 className="client-name">{review.name}</h3>
+                    <h4 className="client-title">{review.title}</h4>
+                    <Rating
+                      emptySymbol={<AiFillStar color="#D9D9D9" />}
+                      fullSymbol={<AiFillStar color="#ffb400" />}
+                      readonly={true}
+                      initialRating={review.star}
+                    />
                   </div>
                 </div>
                 <Card.Body>
