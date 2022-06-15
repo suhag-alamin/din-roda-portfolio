@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick.css";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { FiLink2 } from "react-icons/fi";
-import { BsChevronDown } from "react-icons/bs";
+import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import checkCircle from "../../../images/check-circle.svg";
 
 // slider next prev
@@ -51,7 +51,7 @@ const projects = [
       "Google Sheets",
     ],
     projectLink: "example.com",
-    like: 0,
+    like: "",
     thumb: projectThumb,
   },
   {
@@ -210,12 +210,12 @@ const Projects = () => {
                     <Card.Title className="project-title">
                       {project.title}
                     </Card.Title>
-                    <div className="d-flex justify-content-end gap-4">
-                      <div>
-                        <AiOutlineHeart />
+                    <div className="d-flex justify-content-end align-items-center gap-4">
+                      <div className="like-button">
+                        {!project.like ? <AiOutlineHeart /> : <AiFillHeart />}
                         <span>{project.like}</span>
                       </div>
-                      <div>
+                      <div className="link-button">
                         <a
                           href="http://example.com"
                           target="_blank"
@@ -225,8 +225,22 @@ const Projects = () => {
                         </a>
                       </div>
                       <div>
-                        <Button onClick={() => handleOnclick(project.id)}>
-                          View Details <BsChevronDown />{" "}
+                        <Button
+                          variant="text"
+                          style={{
+                            backgroundColor: "#EBF3F9",
+                            color: "#315CA7",
+                          }}
+                          onClick={() => handleOnclick(project.id)}
+                          className="d-flex gap-2 align-items-center"
+                        >
+                          View Details
+                          {isClicked && clickedId === project.id ? (
+                            <BsChevronUp />
+                          ) : (
+                            <BsChevronDown />
+                          )}
+                          {/* <BsChevronDown /> */}
                         </Button>
                       </div>
                     </div>
