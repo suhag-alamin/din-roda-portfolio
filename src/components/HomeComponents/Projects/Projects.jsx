@@ -51,7 +51,7 @@ const projects = [
       "Google Sheets",
     ],
     projectLink: "example.com",
-    like: "",
+    like: false,
     thumb: projectThumb,
   },
   {
@@ -190,10 +190,16 @@ const Projects = () => {
   // handle onclick
   const [isClicked, setIsClicked] = useState(false);
   const [clickedId, setClickedId] = useState(0);
+  const [like, setLike] = useState(0);
 
   const handleOnclick = (id) => {
     setIsClicked("clicked");
     setClickedId(id);
+  };
+
+  const handleLike = (id) => {
+    projects.find((project) => project.id === id).like += 1;
+    setLike(projects.find((project) => project.id === id).like);
   };
 
   return (
@@ -211,7 +217,10 @@ const Projects = () => {
                       {project.title}
                     </Card.Title>
                     <div className="d-flex justify-content-end align-items-center gap-4">
-                      <div className="like-button">
+                      <div
+                        onClick={() => handleLike(project.id)}
+                        className="like-button"
+                      >
                         {!project.like ? <AiOutlineHeart /> : <AiFillHeart />}
                         <span>{project.like}</span>
                       </div>
@@ -240,7 +249,6 @@ const Projects = () => {
                           ) : (
                             <BsChevronDown />
                           )}
-                          {/* <BsChevronDown /> */}
                         </Button>
                       </div>
                     </div>
