@@ -157,6 +157,12 @@
   margin-bottom: 5px;
 }
 
+/* newsletter-section */
+.newsletter-section {
+  background: #2a3177;
+  color: #fff;
+}
+
 @media only screen and (max-width: 480px) {
   .workflow-box::after {
     content: "";
