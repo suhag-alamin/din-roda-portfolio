@@ -1,7 +1,29 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 import "./Projects.css";
 import projectThumb from "../../../images/project-thumb.svg";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+
+// slider next prev
+const PreviousBtn = (props) => {
+  const { onClick } = props;
+  return (
+    <div className={"PreviousArrow"} onClick={onClick}>
+      <IoIosArrowBack />
+    </div>
+  );
+};
+const NextBtn = (props) => {
+  const { onClick } = props;
+  return (
+    <div className={"NextArrow"} onClick={onClick}>
+      <IoIosArrowForward />
+    </div>
+  );
+};
 
 const projects = [
   {
@@ -103,10 +125,90 @@ const projects = [
 ];
 
 const Projects = () => {
+  // slider
+  const settings = {
+    dots: false,
+    infinite: false,
+    lazyLoad: true,
+    adaptiveHeight: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    nextArrow: <NextBtn />,
+    prevArrow: <PreviousBtn />,
+    cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   return (
     <div className="projects-section">
       <Container className="py-5">
         <h3 className="section-title">PROJECTS</h3>
+        <div className="mt-5">
+          <Slider {...settings}>
+            {projects.map((project) => (
+              <div key={project.id} className="single-slide">
+                <Card className="p-4 h-100">
+                  <Card.Img variant="top" src={project.thumb} />
+                  {console.log(project)}
+                  <Card.Body>
+                    <Card.Title className="project-title">
+                      {project.title}
+                    </Card.Title>
+                    <Card.Text className="tech-skills-des">
+                      The purpose of the meeting is to give the business owner a
+                      centralized and organized report with the findings and
+                      recommendations for turning the business into an
+                      automated, efficient and profitable business.
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </div>
+            ))}
+          </Slider>
+        </div>
       </Container>
     </div>
   );
