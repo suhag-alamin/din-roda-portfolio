@@ -1,0 +1,35 @@
+.article-container {
+  background: url(../../../images/article-bg.png) no-repeat center center;
+  background-size: cover;
+  padding: 180px 0;
+  color: #fff;
+}
+
+.article-container .page-title {
+  width: 80%;
+  margin: auto;
+}
+
+.article-des {
+  font-size: 30px;
+  color: #222;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  .article-container {
+    padding: 60px 0;
+  }
+
+  .article-container .page-title {
+    width: 100%;
+  }
+
+  .article-des {
+    font-size: 20px;
+    width: 100%;
+  }
+}

@@ -81,6 +81,15 @@ const Navigation = ({ transparent }) => {
                   >
                     Contact
                   </Nav.Link>
+                  <Nav.Link
+                    as={Link}
+                    to="/article"
+                    className={
+                      transparent === true ? "nav-link" : "nav-link-dark"
+                    }
+                  >
+                    Article
+                  </Nav.Link>
                 </Nav>
                 <Navbar.Brand as={Link} to="/" className="d-none d-md-block">
                   <img className="logo" src={logo} alt="logo" />
