@@ -19,6 +19,42 @@
   font-weight: 400;
 }
 
+/* workflow-section */
+.workflow-section {
+  background: rgba(152, 156, 183, 0.2);
+}
+
+.workflow-box {
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.workflow-box::after {
+  content: "";
+  position: absolute;
+  top: 35%;
+  left: -5%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 30px 52px 30px 0;
+  border-color: transparent #fff transparent transparent;
+}
+
+.workflow-title {
+  font-size: 32px;
+  color: #222222;
+}
+.workflow-des {
+  font-size: 20px;
+  color: #777777;
+}
+
 @media screen and (max-width: 768px) {
   .article-container {
     padding: 60px 0;
