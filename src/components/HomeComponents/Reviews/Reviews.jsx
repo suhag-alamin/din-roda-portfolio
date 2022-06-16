@@ -151,7 +151,9 @@ const Reviews = () => {
                   </div>
                 </div>
                 <Card.Body>
-                  <Card.Text>{review.review}</Card.Text>
+                  <Card.Text className="client-review">
+                    {review.review}
+                  </Card.Text>
                 </Card.Body>
               </Card>
             ))}

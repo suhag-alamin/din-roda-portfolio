@@ -58,4 +58,13 @@
   .reviewPreviousArrow {
     display: none;
   }
+  .client-name {
+    font-size: 16px;
+  }
+  .client-title {
+    font-size: 12px;
+  }
+  .client-review {
+    font-size: 14px;
+  }
 }

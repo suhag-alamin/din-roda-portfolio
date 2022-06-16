@@ -106,4 +106,7 @@
   .PreviousArrow {
     display: none;
   }
+  .project-box-title {
+    font-size: 16px;
+  }
 }
