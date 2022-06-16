@@ -10,6 +10,7 @@ import "slick-carousel/slick/slick.css";
 import checkCircle from "../../../images/check-circle.svg";
 import projectThumb from "../../../images/project-thumb.svg";
 import "./Projects.css";
+import "animate.css";
 
 // slider next prev
 const PreviousBtn = (props) => {
@@ -209,22 +210,37 @@ const Projects = () => {
         <div className="mt-5">
           <Slider {...settings}>
             {projects.map((project) => (
-              <div key={project.id} className="single-slide">
+              <div
+                data-aos="flip-left"
+                data-aos-duration="1000"
+                key={project.id}
+                className="single-slide"
+              >
                 <Card className="pt-4 ps-4 pe-4">
                   <Card.Img variant="top" src={project.thumb} />
                   <Card.Body>
-                    <Card.Title className="project-title">
+                    <Card.Title
+                      data-aos="fade-down"
+                      data-aos-duration="1500"
+                      className="project-title"
+                    >
                       {project.title}
                     </Card.Title>
                     <div className="d-flex justify-content-end align-items-center gap-4">
                       <div
+                        data-aos="fade-up-right"
+                        data-aos-duration="1500"
                         onClick={() => handleLike(project.id)}
                         className="like-button"
                       >
                         {!project.like ? <AiOutlineHeart /> : <AiFillHeart />}
                         <span>{project.like}</span>
                       </div>
-                      <div className="link-button">
+                      <div
+                        data-aos="fade-up"
+                        data-aos-duration="1500"
+                        className="link-button"
+                      >
                         <a
                           href="http://example.com"
                           target="_blank"
@@ -235,6 +251,8 @@ const Projects = () => {
                       </div>
                       <div>
                         <Button
+                          data-aos="fade-up-left"
+                          data-aos-duration="1500"
                           variant="text"
                           style={{
                             backgroundColor: "#EBF3F9",
@@ -252,56 +270,74 @@ const Projects = () => {
                         </Button>
                       </div>
                     </div>
-                    <div
-                      className={`${"project-details-box"} ${
-                        isClicked === "clicked" && clickedId === project.id
-                          ? "clicked-box"
-                          : ""
-                      }`}
-                    >
-                      {isClicked === "clicked" && clickedId === project.id ? (
-                        <div>
-                          <div className="project-des">
-                            <h3 className="project-box-title">Description</h3>
-                            <p className="project-des">{project.description}</p>
-                          </div>
-                          <div className="features">
-                            <h3 className="project-box-title">Features</h3>
-                            <div className="my-3">
-                              {project.features.map((feature) => (
-                                <div className="d-flex align-items-start gap-2">
-                                  <img
-                                    src={checkCircle}
-                                    className="check-circle"
-                                    alt="check-circle"
-                                  />
-                                  <p className="project-des">{feature}</p>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                          <div className="tech-used">
-                            <h3 className="project-box-title">Tech Used</h3>
-                            <div className="my-3 d-flex gap-3 flex-wrap">
-                              {project.technologies.map((tech) => (
-                                <div className="d-flex flex-row align-items-start gap-2">
-                                  <img
-                                    src={checkCircle}
-                                    className="check-circle"
-                                    alt="check-circle"
-                                  />
-                                  <p className="project-des">{tech}</p>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                      ) : (
-                        <div></div>
-                      )}
-                    </div>
                   </Card.Body>
                 </Card>
+                <div
+                  className={`${"project-details-box p-4"} ${
+                    isClicked === "clicked" && clickedId === project.id
+                      ? "clicked-box"
+                      : ""
+                  } ${
+                    isClicked === "clicked" && clickedId === project.id
+                      ? "animate__animated animate__fadeInUp animate__faster"
+                      : "animate__animated animate__fadeOutDown"
+                  }`}
+                >
+                  {isClicked === "clicked" && clickedId === project.id ? (
+                    <div>
+                      <div className="project-des">
+                        <h3 data-aos="fade-down" className="project-box-title">
+                          Description
+                        </h3>
+                        <p data-aos="fade-down" className="project-des">
+                          {project.description}
+                        </p>
+                      </div>
+                      <div className="features">
+                        <h3 data-aos="fade-right" className="project-box-title">
+                          Features
+                        </h3>
+                        <div className="my-3">
+                          {project.features.map((feature) => (
+                            <div
+                              data-aos="fade-right"
+                              className="d-flex align-items-start gap-2"
+                            >
+                              <img
+                                src={checkCircle}
+                                className="check-circle"
+                                alt="check-circle"
+                              />
+                              <p className="project-des">{feature}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="tech-used">
+                        <h3 data-aos="fade-up" className="project-box-title">
+                          Tech Used
+                        </h3>
+                        <div className="my-3 d-flex gap-3 flex-wrap">
+                          {project.technologies.map((tech) => (
+                            <div
+                              data-aos="fade-up"
+                              className="d-flex flex-row align-items-start gap-2"
+                            >
+                              <img
+                                src={checkCircle}
+                                className="check-circle"
+                                alt="check-circle"
+                              />
+                              <p className="project-des">{tech}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <div></div>
+                  )}
+                </div>
               </div>
             ))}
           </Slider>

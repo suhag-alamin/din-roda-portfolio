@@ -5,6 +5,10 @@ import About from "./components/About/About";
 import Article from "./components/ArticleComponents/Article/Article";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/HomeComponents/Home/Home";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init();
 
 function App() {
   return (

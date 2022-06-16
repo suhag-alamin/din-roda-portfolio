@@ -81,11 +81,10 @@
 }
 
 .project-details-box {
-  margin-top: 20px;
-
   padding-top: 20px;
 }
 .clicked-box {
+  background: #fff;
   border-top: 1px solid #ddd;
 }
 
