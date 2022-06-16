@@ -8,7 +8,7 @@ import checkCircle from "../../../images/check-circle.svg";
 
 const TechSkills = () => {
   return (
-    <div className="tech-skills-section">
+    <div id="skills" className="tech-skills-section">
       <Container className="py-5">
         <h3 className="section-title">TECH SKILLS</h3>
         <Row xs={1} md={3} className="g-4">

@@ -204,7 +204,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="projects-section">
+    <div id="projects" className="projects-section">
       <Container className="py-5">
         <h3 className="section-title">PROJECTS</h3>
         <div className="mt-5">

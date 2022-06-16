@@ -40,7 +40,7 @@ const Navigation = ({ transparent }) => {
             >
               <Offcanvas.Header closeButton></Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="me-auto align-items-center">
+                <Nav className="mx-auto align-items-center">
                   <Nav.Link
                     as={Link}
                     to="/"
@@ -60,8 +60,7 @@ const Navigation = ({ transparent }) => {
                     About
                   </Nav.Link>
                   <Nav.Link
-                    as={Link}
-                    to="/"
+                    href="#skills"
                     className={
                       transparent === true ? "nav-link" : "nav-link-dark"
                     }
@@ -69,8 +68,7 @@ const Navigation = ({ transparent }) => {
                     Skill
                   </Nav.Link>
                   <Nav.Link
-                    as={Link}
-                    to="/"
+                    href="#experience"
                     className={
                       transparent === true ? "nav-link" : "nav-link-dark"
                     }
@@ -78,8 +76,7 @@ const Navigation = ({ transparent }) => {
                     Experience
                   </Nav.Link>
                   <Nav.Link
-                    as={Link}
-                    to="/"
+                    href="#projects"
                     className={
                       transparent === true ? "nav-link" : "nav-link-dark"
                     }
@@ -87,8 +84,7 @@ const Navigation = ({ transparent }) => {
                     Project
                   </Nav.Link>
                   <Nav.Link
-                    as={Link}
-                    to="/"
+                    href="#contact"
                     className={
                       transparent === true ? "nav-link" : "nav-link-dark"
                     }
