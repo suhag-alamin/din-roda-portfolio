@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
@@ -5,6 +6,18 @@ import logo from "../../images/LOGO.svg";
 import "./Navigation.css";
 
 const Navigation = ({ transparent }) => {
+  const [navbar, setNavbar] = useState(false);
+
+  const changeNavbarBg = () => {
+    if (window.scrollY >= 100) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeNavbarBg);
+
   return (
     <>
       {["md"].map((expand) => (
@@ -12,7 +25,8 @@ const Navigation = ({ transparent }) => {
           key={expand}
           bg={transparent === true ? "transparent" : "white"}
           expand={expand}
-          className="mb-3 p-0 nav-bar"
+          className={navbar ? "mb-3 p-0 nav-bar active" : "mb-3 p-0 nav-bar"}
+          // fixed="top"
         >
           <Container className="d-flex align-items-center">
             <Navbar.Brand as={Link} to="/" className="d-md-none">

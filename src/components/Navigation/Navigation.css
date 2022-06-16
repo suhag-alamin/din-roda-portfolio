@@ -18,3 +18,17 @@
     color: #30549e !important;
   }
 }
+.nav-bar {
+  transition: 1s;
+}
+.nav-bar.active {
+  background: #fff !important;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: 1s;
+  z-index: 9;
+}
+.nav-bar.active .nav-link {
+  color: #3055a0 !important;
+}
