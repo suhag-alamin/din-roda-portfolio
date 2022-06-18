@@ -1,5 +1,5 @@
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
-import dinMobile from "../../../images/din-roda-mobile.svg";
+import dinMobile from "../../../images/din-roda-mobile.png";
 import din from "../../../images/din-roda.png";
 import github from "../../../images/Github.svg";
 import linkedin from "../../../images/LinkedIN.svg";
