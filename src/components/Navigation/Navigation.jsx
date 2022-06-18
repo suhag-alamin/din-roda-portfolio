@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
@@ -8,15 +8,20 @@ import "./Navigation.css";
 const Navigation = ({ transparent }) => {
   const [navbar, setNavbar] = useState(false);
 
-  const changeNavbarBg = () => {
-    if (window.scrollY >= 100) {
-      setNavbar(true);
-    } else {
-      setNavbar(false);
-    }
-  };
+  useEffect(() => {
+    const changeNavbarBg = () => {
+      if (window.scrollY >= 180) {
+        setNavbar(true);
+      } else {
+        setNavbar(false);
+      }
+    };
+    window.addEventListener("scroll", changeNavbarBg);
 
-  window.addEventListener("scroll", changeNavbarBg);
+    return () => {
+      window.removeEventListener("scroll", changeNavbarBg);
+    };
+  }, []);
 
   return (
     <>
