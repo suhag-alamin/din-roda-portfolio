@@ -216,7 +216,7 @@ const Projects = () => {
                 key={project.id}
                 className="single-slide"
               >
-                <Card className="pt-4 ps-4 pe-4">
+                <Card className="pt-2 pt-md-4 ps-2 ps-md-4 pe-2 pe-md-4">
                   <Card.Img variant="top" src={project.thumb} />
                   <Card.Body>
                     <Card.Title
@@ -226,7 +226,7 @@ const Projects = () => {
                     >
                       {project.title}
                     </Card.Title>
-                    <div className="d-flex justify-content-end align-items-center gap-4">
+                    <div className="d-flex justify-content-center  justify-content-md-end align-items-center gap-2 gap-md-4">
                       <div
                         data-aos="fade-up-right"
                         data-aos-duration="1500"
@@ -259,7 +259,7 @@ const Projects = () => {
                             color: "#315CA7",
                           }}
                           onClick={() => handleOnclick(project.id)}
-                          className="d-flex gap-2 align-items-center"
+                          className="d-flex gap-1 gap-md-2 align-items-center view-button"
                         >
                           View Details
                           {isClicked && clickedId === project.id ? (
@@ -301,7 +301,7 @@ const Projects = () => {
                           {project.features.map((feature) => (
                             <div
                               data-aos="fade-right"
-                              className="d-flex align-items-start gap-2"
+                              className="d-flex align-items-start gap-1 gap-md-2"
                             >
                               <img
                                 src={checkCircle}
@@ -317,11 +317,11 @@ const Projects = () => {
                         <h3 data-aos="fade-up" className="project-box-title">
                           Tech Used
                         </h3>
-                        <div className="my-3 d-flex gap-3 flex-wrap">
+                        <div className="my-3 d-flex gap-1 gap-md-3 flex-wrap">
                           {project.technologies.map((tech) => (
                             <div
                               data-aos="fade-up"
-                              className="d-flex flex-row align-items-start gap-2"
+                              className="d-flex flex-row align-items-start gap-1 gap-md-2"
                             >
                               <img
                                 src={checkCircle}

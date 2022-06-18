@@ -19,7 +19,7 @@ function App() {
           <Route path="/about" element={<About transparent={false} />} />
           <Route path="/article" element={<Article transparent={false} />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </div>
   );

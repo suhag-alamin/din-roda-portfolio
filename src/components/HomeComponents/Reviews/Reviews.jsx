@@ -128,7 +128,7 @@ const Reviews = () => {
   return (
     <div className="reviews-section">
       <Container className="py-5">
-        <h3 className="section-title">REVIEWS</h3>
+        <h3 className="section-title">CUSTOMER REVIEW</h3>
         <div>
           <Slider {...settings}>
             {reviews.map((review) => (

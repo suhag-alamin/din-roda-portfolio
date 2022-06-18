@@ -13,7 +13,7 @@
 
 .banner-col {
   border-right: 2px solid #fff;
-  padding-right: 50px;
+  padding-right: 20px;
 }
 
 .din-roda {
@@ -28,11 +28,12 @@
   position: relative;
 }
 .mobile-banner {
+  /* background: rgba(42, 49, 119, 0.87); */
   background: rgba(42, 49, 119, 0.87);
   color: #fff;
   width: 90%;
   margin: auto;
-  padding: 30px;
+  padding: 10px;
   z-index: 9;
   margin-top: -30%;
   margin-bottom: 40px;

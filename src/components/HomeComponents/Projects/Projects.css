@@ -109,4 +109,13 @@
   .project-box-title {
     font-size: 16px;
   }
+  .project-title {
+    font-size: 16px;
+  }
+  .like-button,
+  .link-button,
+  .view-button,
+  .view-button svg {
+    font-size: 14px !important;
+  }
 }

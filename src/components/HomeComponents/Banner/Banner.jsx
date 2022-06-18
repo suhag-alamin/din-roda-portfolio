@@ -63,8 +63,8 @@ const Banner = ({ transparent }) => {
       </div>
       <div className="mobile-banner">
         <div className="banner-col text-end">
-          <div className="text-end">
-            <img src={quote} alt="" />
+          <div className="text-end mt-2">
+            <img className="w-25" src={quote} alt="" />
           </div>
           <h2 className="my-4 fs-2">
             effective business conduct based on up-to-date technology is the

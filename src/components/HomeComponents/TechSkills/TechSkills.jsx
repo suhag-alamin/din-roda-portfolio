@@ -13,7 +13,7 @@ const TechSkills = () => {
         <h3 className="section-title">TECH SKILLS</h3>
         <Row xs={1} md={3} className="g-4">
           <Col>
-            <Card className="p-4 h-100">
+            <Card className="p-2 p-md-4 h-100">
               <Card.Img
                 variant="top"
                 className="tech-skill-icon"
