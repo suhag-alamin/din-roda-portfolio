@@ -10,7 +10,7 @@ const Footer = () => {
     <>
       <div className="footer-section">
         <Container className="py-5">
-          <Row className="g-5">
+          <Row className="g-4">
             <Col md={4}>
               <div className="text-end">
                 <h3 className="footer-title">CONTACT</h3>
