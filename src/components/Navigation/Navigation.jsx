@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import logo from "../../images/LOGO.svg";
 import "./Navigation.css";
 
@@ -65,7 +66,8 @@ const Navigation = ({ transparent }) => {
                     About
                   </Nav.Link>
                   <Nav.Link
-                    href="#skills"
+                    as={HashLink}
+                    to="/home#skills"
                     className={
                       transparent === true ? "nav-link" : "nav-link-dark"
                     }
@@ -73,7 +75,8 @@ const Navigation = ({ transparent }) => {
                     Skill
                   </Nav.Link>
                   <Nav.Link
-                    href="#experience"
+                    as={HashLink}
+                    to="/home#experience"
                     className={
                       transparent === true ? "nav-link" : "nav-link-dark"
                     }
@@ -81,7 +84,8 @@ const Navigation = ({ transparent }) => {
                     Experience
                   </Nav.Link>
                   <Nav.Link
-                    href="#projects"
+                    as={HashLink}
+                    to="/home#projects"
                     className={
                       transparent === true ? "nav-link" : "nav-link-dark"
                     }
@@ -89,7 +93,8 @@ const Navigation = ({ transparent }) => {
                     Project
                   </Nav.Link>
                   <Nav.Link
-                    href="#contact"
+                    as={HashLink}
+                    to="/home#contact"
                     className={
                       transparent === true ? "nav-link" : "nav-link-dark"
                     }
