@@ -142,6 +142,7 @@
   }
   .workflow-box {
     padding: 20px;
+    width: 100%;
   }
   .workflow-title {
     font-size: 20px;
@@ -167,12 +168,47 @@
   .process-title {
     font-size: 20px;
   }
+  .step-timeline ul li::before {
+    content: attr(data-counter);
+    position: absolute;
+    top: 110px;
+    left: -64px;
+    width: 50px;
+    height: 50px;
+    background: #4192cf;
+    color: #fff;
+    line-height: 45px;
+    border: 1px solid #4192cf;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 20px;
+  }
+  .step-timeline ul::before {
+    content: "";
+    position: absolute;
+    top: 125px;
+    left: 34px;
+    width: 1px;
+    background: #4192cf;
+    height: calc(100% - 525px);
+  }
 }
 @media only screen and (max-width: 480px) {
   .workflow-box::after {
     content: "";
     position: absolute;
     top: 30%;
+    left: -7%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 22px 20px 0;
+    border-color: transparent #fff transparent transparent;
+  }
+  .workflow-box.last-workflow-box::after {
+    content: "";
+    position: absolute;
+    top: 20%;
     left: -7%;
     width: 0;
     height: 0;

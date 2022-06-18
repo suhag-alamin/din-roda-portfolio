@@ -37,7 +37,7 @@ const Workflow = () => {
               </div>
             </li>
             <li data-counter="3">
-              <div className="workflow-box">
+              <div className="workflow-box last-workflow-box">
                 <h3 className="workflow-title">
                   Training, assimilation and accompaniment
                 </h3>

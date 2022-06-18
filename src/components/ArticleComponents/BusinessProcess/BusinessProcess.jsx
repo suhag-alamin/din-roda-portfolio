@@ -9,7 +9,7 @@ const BusinessProcess = () => {
       <Row className="g-4">
         <Col md={4}>
           <div className="text-center">
-            <img src={businessProcess} alt="" />
+            <img className="img-fluid" src={businessProcess} alt="" />
           </div>
         </Col>
         <Col md={8}>
