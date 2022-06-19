@@ -1,3 +1,8 @@
+.article-page .hide-menu,
+.about-page .hide-menu {
+  display: none !important;
+}
+
 .article-container {
   background: url(../../../images/article-bg.png) no-repeat center center;
   background-size: cover;

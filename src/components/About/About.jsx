@@ -5,7 +5,7 @@ import "./About.css";
 
 const About = ({ transparent }) => {
   return (
-    <div>
+    <div className="about-page">
       <Navigation transparent={transparent} />
       <div className="about-container">
         <h3 className="section-title text-white">About Me</h3>

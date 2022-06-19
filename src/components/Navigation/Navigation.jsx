@@ -69,7 +69,9 @@ const Navigation = ({ transparent }) => {
                     as={HashLink}
                     to="/home#skills"
                     className={
-                      transparent === true ? "nav-link" : "nav-link-dark"
+                      transparent === true
+                        ? "nav-link hide-menu"
+                        : "nav-link-dark hide-menu"
                     }
                   >
                     Skill
@@ -78,7 +80,9 @@ const Navigation = ({ transparent }) => {
                     as={HashLink}
                     to="/home#experience"
                     className={
-                      transparent === true ? "nav-link" : "nav-link-dark"
+                      transparent === true
+                        ? "nav-link hide-menu"
+                        : "nav-link-dark hide-menu"
                     }
                   >
                     Experience
@@ -87,7 +91,9 @@ const Navigation = ({ transparent }) => {
                     as={HashLink}
                     to="/home#projects"
                     className={
-                      transparent === true ? "nav-link" : "nav-link-dark"
+                      transparent === true
+                        ? "nav-link hide-menu"
+                        : "nav-link-dark hide-menu"
                     }
                   >
                     Project
@@ -96,7 +102,9 @@ const Navigation = ({ transparent }) => {
                     as={HashLink}
                     to="/home#contact"
                     className={
-                      transparent === true ? "nav-link" : "nav-link-dark"
+                      transparent === true
+                        ? "nav-link hide-menu"
+                        : "nav-link-dark hide-menu"
                     }
                   >
                     Contact

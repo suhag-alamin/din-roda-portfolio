@@ -8,7 +8,7 @@ import "./Article.css";
 
 const Article = ({ transparent }) => {
   return (
-    <div>
+    <div className="article-page">
       <Navigation transparent={transparent} />
       <ArticleHeader />
       <Workflow />
