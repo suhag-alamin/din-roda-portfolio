@@ -3,12 +3,12 @@ import { Container } from "react-bootstrap";
 import Navigation from "../Navigation/Navigation";
 import "./About.css";
 
-const About = ({ transparent }) => {
+const About = () => {
   return (
     <div>
-      <Navigation transparent={transparent} />
+      {/* <Navigation transparent={transparent} /> */}
       <div className="about-container">
-        <h3 className="page-title">About Me</h3>
+        <h3 className="section-title text-white">About Me</h3>
       </div>
       <Container className="py-5">
         <h3 className="about-title">Hi there! I am Din roda.</h3>
