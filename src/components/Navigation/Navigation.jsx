@@ -56,7 +56,7 @@ const Navigation = ({ transparent }) => {
                   >
                     Home
                   </Nav.Link>
-                  {/* <Nav.Link
+                  <Nav.Link
                     as={Link}
                     to="/about"
                     className={
@@ -100,7 +100,7 @@ const Navigation = ({ transparent }) => {
                     }
                   >
                     Contact
-                  </Nav.Link> */}
+                  </Nav.Link>
                   <Nav.Link
                     as={Link}
                     to="/article"

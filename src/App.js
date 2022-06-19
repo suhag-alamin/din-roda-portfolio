@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home transparent={true} />} />
           <Route path="/home" element={<Home transparent={true} />} />
-          {/* <Route path="/about" element={<About transparent={false} />} /> */}
+          <Route path="/about" element={<About transparent={false} />} />
           <Route path="/article" element={<Article transparent={false} />} />
         </Routes>
         <Footer />
