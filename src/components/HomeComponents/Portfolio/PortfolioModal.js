@@ -27,7 +27,7 @@ const NextBtn = (props) => {
   );
 };
 
-const PortfolioModal = ({ handleModalClose, show, project }) => {
+const PortfolioModal = ({ modalOpen, handleModalClose, show, project }) => {
   const { gallery } = project;
 
   // slider

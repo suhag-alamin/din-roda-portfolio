@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import Home from "./components/HomeComponents/Home/Home";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Projects from "./components/Projects/Projects";
 
 AOS.init();
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/home" element={<Home transparent={true} />} />
           <Route path="/about" element={<About transparent={false} />} />
           <Route path="/article" element={<Article transparent={false} />} />
+          <Route path="/projects" element={<Projects transparent={false} />} />
         </Routes>
         <Footer />
       </Router>

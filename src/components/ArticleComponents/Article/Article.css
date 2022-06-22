@@ -1,6 +1,6 @@
 .article-page .hide-menu,
 .about-page .hide-menu {
-  display: none !important;
+  /* display: none !important; */
 }
 
 .article-container {

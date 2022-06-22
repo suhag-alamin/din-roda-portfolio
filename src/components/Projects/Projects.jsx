@@ -1,8 +1,9 @@
+import React from "react";
+import SinglePortfolio from "../HomeComponents/Portfolio/SinglePortfolio";
+import Navigation from "../Navigation/Navigation";
 import { Button, Container, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import projectThumb from "../../../images/project-thumb.svg";
-import "./Portfolio.css";
-import SinglePortfolio from "./SinglePortfolio";
+import projectThumb from "../../images/project-thumb.svg";
 
 const projects = [
   {
@@ -151,40 +152,27 @@ const projects = [
   },
 ];
 
-const Portfolio = () => {
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate("/projects");
-  };
-
+const Projects = ({ transparent }) => {
   return (
-    <div id="portfolio">
+    <div>
+      <Navigation transparent={transparent} />
+      {/* main  */}
+      <div className="article-container">
+        <h3 className="section-title text-white">PROJECTS</h3>
+      </div>
       <Container className="py-5">
-        <h3 className="section-title">PROJECTS</h3>
-        <div>
-          <Row xs={1} md={3} className="g-4">
-            {projects.slice(0, 3).map((project) => (
-              <SinglePortfolio
-                key={project.id}
-                project={project}
-                projects={projects}
-              />
-            ))}
-          </Row>
-        </div>
-        <div style={{ textAlign: "center", marginTop: 20 }}>
-          <Button
-            onClick={handleClick}
-            variant="primary"
-            style={{ backgroundColor: "#2A3177" }}
-          >
-            See All Projects
-          </Button>
-        </div>
+        <Row xs={1} md={3} className="g-4">
+          {projects.slice(0, 3).map((project) => (
+            <SinglePortfolio
+              key={project.id}
+              project={project}
+              projects={projects}
+            />
+          ))}
+        </Row>
       </Container>
     </div>
   );
 };
 
-export default Portfolio;
+export default Projects;
