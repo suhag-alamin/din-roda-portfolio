@@ -1,3 +1,4 @@
+import "animate.css";
 import { useState } from "react";
 import { Button, Card, Container } from "react-bootstrap";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
@@ -10,7 +11,6 @@ import "slick-carousel/slick/slick.css";
 import checkCircle from "../../../images/check-circle.svg";
 import projectThumb from "../../../images/project-thumb.svg";
 import "./Projects.css";
-import "animate.css";
 
 // slider next prev
 const PreviousBtn = (props) => {
